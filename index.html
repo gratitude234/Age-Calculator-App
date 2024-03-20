@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <title>Frontend Mentor | Age calculator app</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <div class="input-container">
+        <div class="input-tags">
+              <label for="Day" id="labels" >Day</label><br>
+              <input type="text" maxlength="2" placeholder="DD" id="day"><br>
+              <span id="Day-span" class="error-message hidden">Must be a valid day</span>
+              <span id="Day-span1" class="error-message hidden">This field is required</span>
+        </div>
+        <div class="input-tags">
+              <label for="Month" id="labelMonth">Month</label><br>
+              <input type="text" maxlength="2" placeholder="MM" id="month"><br>
+              <span id="Month-span" class="error-message hidden">Must be a valid Month</span>
+              <span id="Month-span1" class="error-message hidden">This field is required</span>
+        </div>
+        <div class="input-tags">
+              <label for="Year" id="labelYear">Year</label><br>
+              <input type="text" maxlength="4" placeholder="YYYY" id="year"><br>
+              <span id="Year-span" class="error-message hidden">Must be a valid year</span>
+              <span id="Year-span1" class="error-message hidden">This field is required</span>
+        </div>
+      </div>
+      <div class="line-container">
+            <hr>
+            <img src="./assets/images/icon-arrow.svg" alt="img-submit" onclick="calculateAge()">
+      </div>
+      <div class="Age-container">
+            <h1 class="line2" id="displayYear">--</h1>
+            <h1 class="Age">years</h1>
+      </div>
+      <div class="Age-container">
+            <h1 class="line2" id="displayMonth">--</h1>
+            <h1 class="Age">months</h1>
+      </div>
+      <div class="Age-container">
+            <h1 class="line2" id="displayDay">--</h1>
+            <h1 class="Age">days</h1>
+      </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html> 
