@@ -52,35 +52,30 @@ const calculateAge = () => {
         newDay += prevMonth.getDate();
         newMonth--;
     }
-    if (testDays(Days)) {
+    if (testDays(Days) && testMonths(Months) && testYears(Years)) {
         displayDays.innerHTML = newDay;
-        
-    } else{
+        displayMonths.innerHTML = newMonth;
+        displayYears.innerHTML = newYear;
+    }
+    if (!testDays(Days)){
         label.className = "label-error";
         daysInput.className = "days-error";
         daysError.classList.add("error-message");
         daysError.classList.remove("hidden");
         emptyMessage.classList.add("hidden")
     }
-    if (testMonths(Months)) {
-        displayMonths.innerHTML = newMonth;
-
-    } else{
+    if (!testMonths(Months)) {
         labelMonth.className = "label-error";
         monthsInput.className = "days-error";
         monthsError.classList.add("error-message");
         monthsError.classList.remove("hidden")
     }
-    if (testYears(Years)) {
-        displayYears.innerHTML = newYear;
- 
-    } else{
+    if (!testYears(Years)){
         labelYear.className = "label-error";
         yearsInput.className = "days-error";
         yearError.classList.add("error-message");
         yearError.classList.remove("hidden")
     }
-
     if (Days === "") {
         emptyMessage.classList.add("error-message");
         emptyMessage.classList.remove("hidden")
@@ -96,7 +91,6 @@ const calculateAge = () => {
         emptyYearMessage.classList.remove("hidden");
         yearError.classList.add('hidden');
     }
-
 }
 
 
